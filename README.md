@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Тестовое задание
 
-## Getting Started
+## 📌 Описание
 
-First, run the development server:
+Реализация лендинга по макету, адаптированного под десктоп, планшет и мобильные устройства.  
+Функциональность включает в себя загрузку товаров с API, отображение отзывов, корзину с сохранением данных и отправку заказа на сервер.
+
+---
+
+## ✅ Реализовано
+
+### UI / Адаптация
+
+- [x] Полная адаптация под мобильные устройства и планшеты
+- [x] Соответствие дизайну из Figma
+- [x] Обработка длинных названий товаров
+
+### Отзывы
+
+- [x] Парсинг HTML из JSON и безопасный вывод (защита от XSS)
+
+### Товары
+
+- [x] Загрузка первой страницы товаров при загрузке страницы
+- [x] Подгрузка следующих страниц при прокрутке (infinite scroll)
+- [x] Прелоадер на время загрузки
+
+### Корзина
+
+- [x] Кнопка "Купить" заменяется на `+ / -` и поле ввода количества
+- [x] Возможность изменять количество вручную
+- [x] Изменения отображаются в корзине (сверху)
+- [x] Состояние корзины и телефон сохраняются в localStorage
+
+### Заказ
+
+- [x] Маска для ввода номера телефона
+- [x] Валидация телефона при заказе
+- [x] Подсветка ошибок
+- [x] Отправка данных на сервер в формате JSON
+- [x] Попап об успешной отправке заказа
+
+---
+
+## 💡 Дополнительно
+
+- [x] Улучшен UX: добавлены прелоадеры, заглушки при отсутствии товаров/отзывов
+- [x] SSG, SSR с использованием Next.js — быстрая загрузка и SEO
+- [x] Компоненты разбиты по ответственности, легко расширяемы
+- [x] Использован TypeScript
+- [x] Обработка ошибок API и fallback-состояния
+
+---
+
+## 🛠️ Технологии
+
+- Next.js
+- TypeScript
+- TailwindCSS
+- Zustand (для управления корзиной)
+- TanStack Query
+- sanitizeHtml (для безопасного вывода HTML)
+- swiper
+- prettier
+
+---
+
+## 🚀 Как запустить
 
 ```bash
+# 1. Клонировать репозиторий
+git clone https://github.com/RockyAtoyan/o-complex-test.git
+
+# 2. Перейти в папку проекта
+cd o-complex-test
+
+# 3 Создать .env файл в корне проекта по примеру .env.example и указать значение переменной NEXT_PUBLIC_API_URL="http://o-complex.com:1337"
+
+# 4. Установить зависимости
+npm install
+
+# 5. Собрать проект
+npm run build
+
+# 5. Запустить проект
+npm run start
+
+# 6. Можно запустить в режиме разработки
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
