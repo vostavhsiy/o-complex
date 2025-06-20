@@ -1,0 +1,29 @@
+@use "tailwindcss";
+@use "swiper/css";
+
+:root {
+  --dark: #222222;
+  --light: #fff;
+  --foreground: #323232;
+  --secondary: #484848;
+  --primary: #670081;
+  --header-width: 3.5rem;
+}
+
+@theme {
+  --color-dark: var(--dark);
+  --color-light: var(--light);
+  --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
+  --spacing-header-width: var(--header-width);
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-light;
+  }
+  .cover {
+    @apply w-full h-full object-cover object-center;
+  }
+}
