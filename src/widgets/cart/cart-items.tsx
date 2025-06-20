@@ -22,11 +22,13 @@ const CartItems = () => {
         </p>
         <p className="w-max sm:w-1/4 flex items-center gap-3 text-lg font-semibold">
           <span>{!!bucket.length ? bucketPrice : 0}₽</span>
-          <span className="text-sm text-light/60">{bucketQuantity} шт.</span>
+          <span className="text-sm flex-shrink-0 text-light/60">
+            {bucketQuantity} шт.
+          </span>
         </p>
       </div>
       <div className="px-6 flex items-center justify-between gap-3 w-full">
-        <div className="w-auto flex-1 sm:flex-0 sm:w-[75%] h-[1px] bg-light flex-shrink-0"></div>
+        <div className="w-auto flex-1 sm:flex-none sm:w-[75%] h-[1px] bg-light flex-shrink-0"></div>
         <span>+</span>
         <div className="flex-1 h-[1px] bg-light flex-shrink-0"></div>
       </div>
